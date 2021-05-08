@@ -10,13 +10,14 @@ import Foundation
 class ApplicationCoordinator {
     
     private var router: Router
-    private let controllerFactory: ViewControllersFactory
+    private let factory: ViewControllersFactory
     
     private var charListView: CharListController?
+    private var addCharView: AddCharController?
     
     init(router: Router) {
         self.router = router
-        controllerFactory = ViewControllersFactory()
+        factory = ViewControllersFactory()
     }
     
     func start() {
@@ -24,9 +25,23 @@ class ApplicationCoordinator {
     }
     
     private func startCharactersFlow() {
-        charListView = controllerFactory.makeCharListVC()
+        charListView = factory.makeCharListVC()
+        
+        charListView?.onPlusCharacter = { [weak self] in
+            self?.addCharacter()
+        }
         
         router.push(charListView)
+    }
+    
+    private func addCharacter() {
+        addCharView = factory.makeAddCharVC()
+        
+        addCharView?.onBack = { [weak self] in
+            self?.router.popModule()
+        }
+        
+        router.push(addCharView)
     }
     
 }

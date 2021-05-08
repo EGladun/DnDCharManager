@@ -29,7 +29,7 @@ class HeroCharacter {
     
 }
 
-enum Race {
+enum Race: CaseIterable {
     case human, elf, dwarf, nightElf, highElf, succubus, demon, dragonite, tiffling
     
     var string: String {
@@ -56,7 +56,7 @@ enum Race {
     }
 }
 
-enum Class {
+enum Class: CaseIterable {
     case knight, mage, rogue, thief, barbadian, warlock, shaman, druid, pathfinder
     
     var string: String {

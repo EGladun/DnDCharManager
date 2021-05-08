@@ -14,4 +14,8 @@ class ViewControllersFactory {
         return CharListController.controllerFromStoryboard("Main")
     }
     
+    func makeAddCharVC() -> AddCharController {
+        return AddCharController.controllerFromStoryboard("Main")
+    }
+    
 }

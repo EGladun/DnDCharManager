@@ -19,12 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var coordinator: ApplicationCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow()
-        window?.rootViewController = UINavigationController()
-        window?.makeKeyAndVisible()
+        setupWindow()
         
         start()
         return true
+    }
+    
+    private func setupWindow() {
+        window = UIWindow()
+        let navController = UINavigationController()
+        navController.setNavigationBarHidden(true, animated: false)
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
     }
     
     private func makeRouter() -> Router {

@@ -11,6 +11,10 @@ class CharListViewModel: BaseViewModel {
     
     private var charList = [HeroCharacter]()
     
+    func fetchCharacters() {
+        charList = LocalManager.shared.getCharacters()
+    }
+    
     func getCharList() -> [HeroCharacter] {
         return charList
     }

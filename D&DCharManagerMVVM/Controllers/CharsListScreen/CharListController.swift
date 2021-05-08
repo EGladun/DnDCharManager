@@ -16,16 +16,19 @@ class CharListController: BaseController {
     
     let viewModel = CharListViewModel()
     
+    var onPlusCharacter: (()->Void)?
+    
     //MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+        viewModel.addMockHeroes()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupTableView()
-        viewModel.addMockHeroes()
+        viewModel.fetchCharacters()
         charactersTable?.reloadData()
     }
     
@@ -40,7 +43,7 @@ class CharListController: BaseController {
     //MARK: Actions
 
     @IBAction func plusHandler(_ sender: Any) {
-        
+        onPlusCharacter?()
     }
 }
 

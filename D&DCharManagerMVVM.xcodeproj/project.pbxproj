@@ -27,6 +27,9 @@
 		FA0FBE382646E07F009F7AA4 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0FBE362646E07F009F7AA4 /* CharacterCell.xib */; };
 		FA0FBE3D2646E0C1009F7AA4 /* UITableViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBE3C2646E0C1009F7AA4 /* UITableViewExtentions.swift */; };
 		FA0FBE422646E11F009F7AA4 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBE412646E11F009F7AA4 /* UIViewExtensions.swift */; };
+		FA671007264716CD00A41BF3 /* AddCharController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA671006264716CD00A41BF3 /* AddCharController.swift */; };
+		FA67100F2647173D00A41BF3 /* AddCharViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67100E2647173D00A41BF3 /* AddCharViewModel.swift */; };
+		FA67101426471A0400A41BF3 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67101326471A0400A41BF3 /* LocalManager.swift */; };
 		FA7898A22646E67000C21392 /* GameCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7898A12646E67000C21392 /* GameCharacter.swift */; };
 		FA7898A82646E81C00C21392 /* CharStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7898A72646E81C00C21392 /* CharStats.swift */; };
 		FA7898B52646FF2800C21392 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7898B42646FF2800C21392 /* UIViewControllerExtension.swift */; };
@@ -76,6 +79,9 @@
 		FA0FBE362646E07F009F7AA4 /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		FA0FBE3C2646E0C1009F7AA4 /* UITableViewExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtentions.swift; sourceTree = "<group>"; };
 		FA0FBE412646E11F009F7AA4 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		FA671006264716CD00A41BF3 /* AddCharController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharController.swift; sourceTree = "<group>"; };
+		FA67100E2647173D00A41BF3 /* AddCharViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharViewModel.swift; sourceTree = "<group>"; };
+		FA67101326471A0400A41BF3 /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
 		FA7898A12646E67000C21392 /* GameCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCharacter.swift; sourceTree = "<group>"; };
 		FA7898A72646E81C00C21392 /* CharStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharStats.swift; sourceTree = "<group>"; };
 		FA7898B42646FF2800C21392 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = ../../../../winmobile/WINmobile/Extensions/UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 		FA0FBDBE2646B6E9009F7AA4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA671005264716AC00A41BF3 /* AddCharScreen */,
 				FA0FBDC32646B797009F7AA4 /* CharsListScreen */,
 			);
 			path = Controllers;
@@ -178,6 +185,7 @@
 		FA0FBDBF2646B702009F7AA4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				FA67101326471A0400A41BF3 /* LocalManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -261,6 +269,15 @@
 				FA0FBE362646E07F009F7AA4 /* CharacterCell.xib */,
 			);
 			path = CharacterCell;
+			sourceTree = "<group>";
+		};
+		FA671005264716AC00A41BF3 /* AddCharScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA671006264716CD00A41BF3 /* AddCharController.swift */,
+				FA67100E2647173D00A41BF3 /* AddCharViewModel.swift */,
+			);
+			path = AddCharScreen;
 			sourceTree = "<group>";
 		};
 		FA7898A02646E64300C21392 /* Models */ = {
@@ -424,13 +441,16 @@
 				FA7898BA2646FF3A00C21392 /* NSObjectExtensions.swift in Sources */,
 				FA0FBE372646E07F009F7AA4 /* CharacterCell.swift in Sources */,
 				FA0FBE212646C1B4009F7AA4 /* BaseController.swift in Sources */,
+				FA67100F2647173D00A41BF3 /* AddCharViewModel.swift in Sources */,
 				FA0FBE3D2646E0C1009F7AA4 /* UITableViewExtentions.swift in Sources */,
 				FA7898A82646E81C00C21392 /* CharStats.swift in Sources */,
 				FA0FBDD62646BA8E009F7AA4 /* Router.swift in Sources */,
 				FA0FBE1B2646C0A5009F7AA4 /* VIewControllersFactory.swift in Sources */,
 				FA0FBE422646E11F009F7AA4 /* UIViewExtensions.swift in Sources */,
 				FA0FBDDE2646BAB4009F7AA4 /* RouterImp.swift in Sources */,
+				FA67101426471A0400A41BF3 /* LocalManager.swift in Sources */,
 				FA0FBD862646B626009F7AA4 /* AppDelegate.swift in Sources */,
+				FA671007264716CD00A41BF3 /* AddCharController.swift in Sources */,
 				FA0FBDE32646BAEC009F7AA4 /* Presentable.swift in Sources */,
 				FA0FBE162646BDBB009F7AA4 /* ApplicationCoordinator.swift in Sources */,
 			);

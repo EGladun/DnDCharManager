@@ -9,16 +9,10 @@ import UIKit
 
 class BaseController: UIViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
+    var onBack: (() -> Void)?
     
-    override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        
-        super.viewWillDisappear(animated)
+    @IBAction func backHandler(_ sender: Any) {
+        onBack?()
     }
     
 }
