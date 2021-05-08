@@ -15,9 +15,37 @@
                     <view key="view" contentMode="scaleToFill" id="iMP-Z5-7Id">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wmq-iP-vPj">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxc-q8-pIL">
+                                <rect key="frame" x="364" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1YL-Uj-SK5"/>
+                                    <constraint firstAttribute="height" constant="50" id="3xN-a7-mPq"/>
+                                </constraints>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="plusHandler:" destination="pdJ-WF-Otc" eventType="touchUpInside" id="wfi-3E-ESY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="udm-ff-4Xv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sxc-q8-pIL" firstAttribute="top" secondItem="udm-ff-4Xv" secondAttribute="top" id="Pt1-nv-Zcq"/>
+                            <constraint firstItem="udm-ff-4Xv" firstAttribute="trailing" secondItem="Sxc-q8-pIL" secondAttribute="trailing" id="Wbb-Re-hha"/>
+                            <constraint firstItem="Wmq-iP-vPj" firstAttribute="top" secondItem="udm-ff-4Xv" secondAttribute="top" constant="50" id="bsN-yT-SV3"/>
+                            <constraint firstItem="udm-ff-4Xv" firstAttribute="trailing" secondItem="Wmq-iP-vPj" secondAttribute="trailing" id="cou-Ci-yfa"/>
+                            <constraint firstItem="udm-ff-4Xv" firstAttribute="bottom" secondItem="Wmq-iP-vPj" secondAttribute="bottom" id="uMm-r9-eVJ"/>
+                            <constraint firstItem="Wmq-iP-vPj" firstAttribute="leading" secondItem="udm-ff-4Xv" secondAttribute="leading" id="zxr-XZ-42g"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="charactersTable" destination="Wmq-iP-vPj" id="LJd-H5-lSn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Irj-tu-pkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,8 +53,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

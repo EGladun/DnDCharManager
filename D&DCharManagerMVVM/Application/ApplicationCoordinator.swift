@@ -11,14 +11,12 @@ class ApplicationCoordinator {
     
     private var router: Router
     private let controllerFactory: ViewControllersFactory
-    private let modelFactory: ViewModelsFactory
     
     private var charListView: CharListController?
     
     init(router: Router) {
         self.router = router
         controllerFactory = ViewControllersFactory()
-        modelFactory = ViewModelsFactory()
     }
     
     func start() {
@@ -26,7 +24,7 @@ class ApplicationCoordinator {
     }
     
     private func startCharactersFlow() {
-        charListView = controllerFactory.makeCharListVC(viewModel: modelFactory.makeCharListVM())
+        charListView = controllerFactory.makeCharListVC()
         
         router.push(charListView)
     }

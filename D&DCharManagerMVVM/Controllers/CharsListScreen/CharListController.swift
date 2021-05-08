@@ -9,16 +9,14 @@ import UIKit
 
 class CharListController: BaseController {
     
-    let viewModel: CharListViewModel
+    //MARK: Outlets
+    @IBOutlet weak var charactersTable: UITableView!
     
-    init(viewModel: CharListViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
+    //MARK: Variables and constants
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    let viewModel = CharListViewModel()
+    
+    //MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +24,34 @@ class CharListController: BaseController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        view.backgroundColor = .gray
+        setupTableView()
+        viewModel.addMockHeroes()
+        charactersTable?.reloadData()
     }
+    
+    //MARK: Methods
+    
+    func setupTableView() {
+        charactersTable?.delegate = self
+        charactersTable?.dataSource = self
+        charactersTable?.registerCellNib(CharacterCell.self)
+    }
+    
+    //MARK: Actions
 
+    @IBAction func plusHandler(_ sender: Any) {
+        
+    }
+}
+
+extension CharListController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getCharList().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CharacterCell.self)) as! CharacterCell
+        cell.fillData(with: viewModel.getCharList()[indexPath.row])
+        return cell
+    }
 }

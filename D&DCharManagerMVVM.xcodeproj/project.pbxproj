@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		FA0FBD922646B62B009F7AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0FBD902646B62B009F7AA4 /* LaunchScreen.storyboard */; };
 		FA0FBD9D2646B62B009F7AA4 /* D_DCharManagerMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBD9C2646B62B009F7AA4 /* D_DCharManagerMVVMTests.swift */; };
 		FA0FBDA82646B62B009F7AA4 /* D_DCharManagerMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDA72646B62B009F7AA4 /* D_DCharManagerMVVMUITests.swift */; };
-		FA0FBDC62646B853009F7AA4 /* ViewModelsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDC52646B853009F7AA4 /* ViewModelsFactory.swift */; };
 		FA0FBDCB2646B8BE009F7AA4 /* CharListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDCA2646B8BE009F7AA4 /* CharListController.swift */; };
 		FA0FBDD02646B8DB009F7AA4 /* CharListVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDCF2646B8DB009F7AA4 /* CharListVIewModel.swift */; };
 		FA0FBDD62646BA8E009F7AA4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDD52646BA8E009F7AA4 /* Router.swift */; };
@@ -23,6 +22,15 @@
 		FA0FBE1B2646C0A5009F7AA4 /* VIewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBE1A2646C0A5009F7AA4 /* VIewControllersFactory.swift */; };
 		FA0FBE212646C1B4009F7AA4 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBE202646C1B4009F7AA4 /* BaseController.swift */; };
 		FA0FBE262646C1E4009F7AA4 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBE252646C1E4009F7AA4 /* BaseViewModel.swift */; };
+		FA0FBE2F2646DFA5009F7AA4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FA0FBE2E2646DFA5009F7AA4 /* SDWebImage */; };
+		FA0FBE372646E07F009F7AA4 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBE352646E07F009F7AA4 /* CharacterCell.swift */; };
+		FA0FBE382646E07F009F7AA4 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0FBE362646E07F009F7AA4 /* CharacterCell.xib */; };
+		FA0FBE3D2646E0C1009F7AA4 /* UITableViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBE3C2646E0C1009F7AA4 /* UITableViewExtentions.swift */; };
+		FA0FBE422646E11F009F7AA4 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBE412646E11F009F7AA4 /* UIViewExtensions.swift */; };
+		FA7898A22646E67000C21392 /* GameCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7898A12646E67000C21392 /* GameCharacter.swift */; };
+		FA7898A82646E81C00C21392 /* CharStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7898A72646E81C00C21392 /* CharStats.swift */; };
+		FA7898B52646FF2800C21392 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7898B42646FF2800C21392 /* UIViewControllerExtension.swift */; };
+		FA7898BA2646FF3A00C21392 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7898B92646FF3A00C21392 /* NSObjectExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +63,6 @@
 		FA0FBDA32646B62B009F7AA4 /* D&DCharManagerMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "D&DCharManagerMVVMUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0FBDA72646B62B009F7AA4 /* D_DCharManagerMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_DCharManagerMVVMUITests.swift; sourceTree = "<group>"; };
 		FA0FBDA92646B62B009F7AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA0FBDC52646B853009F7AA4 /* ViewModelsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsFactory.swift; sourceTree = "<group>"; };
 		FA0FBDCA2646B8BE009F7AA4 /* CharListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListController.swift; sourceTree = "<group>"; };
 		FA0FBDCF2646B8DB009F7AA4 /* CharListVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListVIewModel.swift; sourceTree = "<group>"; };
 		FA0FBDD52646BA8E009F7AA4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -65,6 +72,14 @@
 		FA0FBE1A2646C0A5009F7AA4 /* VIewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewControllersFactory.swift; sourceTree = "<group>"; };
 		FA0FBE202646C1B4009F7AA4 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		FA0FBE252646C1E4009F7AA4 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		FA0FBE352646E07F009F7AA4 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		FA0FBE362646E07F009F7AA4 /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
+		FA0FBE3C2646E0C1009F7AA4 /* UITableViewExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtentions.swift; sourceTree = "<group>"; };
+		FA0FBE412646E11F009F7AA4 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		FA7898A12646E67000C21392 /* GameCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCharacter.swift; sourceTree = "<group>"; };
+		FA7898A72646E81C00C21392 /* CharStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharStats.swift; sourceTree = "<group>"; };
+		FA7898B42646FF2800C21392 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = ../../../../winmobile/WINmobile/Extensions/UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		FA7898B92646FF3A00C21392 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0FBE2F2646DFA5009F7AA4 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,14 +131,17 @@
 		FA0FBD842646B626009F7AA4 /* D&DCharManagerMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				FA0FBE1F2646C19B009F7AA4 /* Protocols */,
-				FA0FBDD42646BA80009F7AA4 /* Router */,
 				FA0FBDC12646B720009F7AA4 /* Application */,
+				FA0FBDD42646BA80009F7AA4 /* Router */,
+				FA0FBE1F2646C19B009F7AA4 /* Protocols */,
 				FA0FBDC22646B727009F7AA4 /* Storyboards */,
 				FA0FBDC02646B717009F7AA4 /* Extensions */,
 				FA0FBDBF2646B702009F7AA4 /* Managers */,
 				FA0FBDBE2646B6E9009F7AA4 /* Controllers */,
+				FA0FBE332646E04F009F7AA4 /* CustomViews */,
 				FA0FBDC42646B7B3009F7AA4 /* Factories */,
+				FA7898A02646E64300C21392 /* Models */,
+				FA7898A62646E7F300C21392 /* Structs */,
 				FA0FBD8E2646B62B009F7AA4 /* Assets.xcassets */,
 				FA0FBD902646B62B009F7AA4 /* LaunchScreen.storyboard */,
 				FA0FBD932646B62B009F7AA4 /* Info.plist */,
@@ -166,6 +185,10 @@
 		FA0FBDC02646B717009F7AA4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FA7898B92646FF3A00C21392 /* NSObjectExtensions.swift */,
+				FA7898B42646FF2800C21392 /* UIViewControllerExtension.swift */,
+				FA0FBE3C2646E0C1009F7AA4 /* UITableViewExtentions.swift */,
+				FA0FBE412646E11F009F7AA4 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -199,7 +222,6 @@
 		FA0FBDC42646B7B3009F7AA4 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				FA0FBDC52646B853009F7AA4 /* ViewModelsFactory.swift */,
 				FA0FBE1A2646C0A5009F7AA4 /* VIewControllersFactory.swift */,
 			);
 			path = Factories;
@@ -224,6 +246,39 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		FA0FBE332646E04F009F7AA4 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FBE342646E05C009F7AA4 /* CharacterCell */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		FA0FBE342646E05C009F7AA4 /* CharacterCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FBE352646E07F009F7AA4 /* CharacterCell.swift */,
+				FA0FBE362646E07F009F7AA4 /* CharacterCell.xib */,
+			);
+			path = CharacterCell;
+			sourceTree = "<group>";
+		};
+		FA7898A02646E64300C21392 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA7898A12646E67000C21392 /* GameCharacter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA7898A62646E7F300C21392 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				FA7898A72646E81C00C21392 /* CharStats.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +295,9 @@
 			dependencies = (
 			);
 			name = "D&DCharManagerMVVM";
+			packageProductDependencies = (
+				FA0FBE2E2646DFA5009F7AA4 /* SDWebImage */,
+			);
 			productName = "D&DCharManagerMVVM";
 			productReference = FA0FBD822646B626009F7AA4 /* D&DCharManagerMVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -311,6 +369,9 @@
 				Base,
 			);
 			mainGroup = FA0FBD792646B626009F7AA4;
+			packageReferences = (
+				FA0FBE2D2646DFA5009F7AA4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = FA0FBD832646B626009F7AA4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,6 +391,7 @@
 				FA0FBD922646B62B009F7AA4 /* LaunchScreen.storyboard in Resources */,
 				FA0FBD8F2646B62B009F7AA4 /* Assets.xcassets in Resources */,
 				FA0FBD8D2646B627009F7AA4 /* Main.storyboard in Resources */,
+				FA0FBE382646E07F009F7AA4 /* CharacterCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,15 +416,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7898A22646E67000C21392 /* GameCharacter.swift in Sources */,
 				FA0FBDD02646B8DB009F7AA4 /* CharListVIewModel.swift in Sources */,
 				FA0FBE262646C1E4009F7AA4 /* BaseViewModel.swift in Sources */,
 				FA0FBDCB2646B8BE009F7AA4 /* CharListController.swift in Sources */,
+				FA7898B52646FF2800C21392 /* UIViewControllerExtension.swift in Sources */,
+				FA7898BA2646FF3A00C21392 /* NSObjectExtensions.swift in Sources */,
+				FA0FBE372646E07F009F7AA4 /* CharacterCell.swift in Sources */,
 				FA0FBE212646C1B4009F7AA4 /* BaseController.swift in Sources */,
+				FA0FBE3D2646E0C1009F7AA4 /* UITableViewExtentions.swift in Sources */,
+				FA7898A82646E81C00C21392 /* CharStats.swift in Sources */,
 				FA0FBDD62646BA8E009F7AA4 /* Router.swift in Sources */,
 				FA0FBE1B2646C0A5009F7AA4 /* VIewControllersFactory.swift in Sources */,
+				FA0FBE422646E11F009F7AA4 /* UIViewExtensions.swift in Sources */,
 				FA0FBDDE2646BAB4009F7AA4 /* RouterImp.swift in Sources */,
 				FA0FBD862646B626009F7AA4 /* AppDelegate.swift in Sources */,
-				FA0FBDC62646B853009F7AA4 /* ViewModelsFactory.swift in Sources */,
 				FA0FBDE32646BAEC009F7AA4 /* Presentable.swift in Sources */,
 				FA0FBE162646BDBB009F7AA4 /* ApplicationCoordinator.swift in Sources */,
 			);
@@ -697,6 +765,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA0FBE2D2646DFA5009F7AA4 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA0FBE2E2646DFA5009F7AA4 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA0FBE2D2646DFA5009F7AA4 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA0FBD7A2646B626009F7AA4 /* Project object */;
 }

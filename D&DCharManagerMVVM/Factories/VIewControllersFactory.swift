@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 class ViewControllersFactory {
     
-    func makeCharListVC(viewModel: CharListViewModel) -> CharListController {
-        return CharListController(viewModel: viewModel)
+    func makeCharListVC() -> CharListController {
+        return CharListController.controllerFromStoryboard("Main")
     }
     
 }
