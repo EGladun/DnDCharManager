@@ -30,7 +30,7 @@ class HeroCharacter {
 }
 
 enum Race: CaseIterable {
-    case human, elf, dwarf, nightElf, highElf, succubus, demon, dragonite, tiffling
+    case human, elf, dwarf, succubus, demon, dragonite, tiffling
     
     var string: String {
         switch self {
@@ -40,10 +40,6 @@ enum Race: CaseIterable {
             return "elf"
         case .dwarf:
             return "dwarf"
-        case .nightElf:
-            return "night elf"
-        case .highElf:
-            return "high elf"
         case .succubus:
             return "succubus"
         case .demon:
@@ -57,7 +53,7 @@ enum Race: CaseIterable {
 }
 
 enum Class: CaseIterable {
-    case knight, mage, rogue, thief, barbadian, warlock, shaman, druid, pathfinder
+    case knight, mage, rogue, thief, barbarian, warlock, shaman, druid, pathfinder
     
     var string: String {
         switch self {
@@ -69,7 +65,7 @@ enum Class: CaseIterable {
             return "Rogue"
         case .thief:
             return "Thief"
-        case .barbadian:
+        case .barbarian:
             return "Barbarian"
         case .warlock:
             return "Warlock"
