@@ -21,6 +21,7 @@ class AddCharController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPickers()
+        setupDI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,11 +39,25 @@ class AddCharController: BaseController {
         classPicker.dataSource = self
         classPicker.delegate = self
     }
+    
+    func setupDI() {
+        viewModel.heroCreated = { [weak self] in
+            self?.onBack?()
+        }
+    }
 
     //MARK: Actions
     
     @IBAction func generateHandler(_ sender: Any) {
-        //
+        if let name = nameField.text {
+            viewModel.createHero(with: name)
+        } else {
+            let alertController = UIAlertController(title: "Oops", message: "I'm sorry", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Meh", style: .default, handler: {_ in
+                alertController.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 }
 
@@ -71,5 +86,14 @@ extension AddCharController: UIPickerViewDataSource, UIPickerViewDelegate {
         }
         
         return ""
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == racePicker {
+            viewModel.selectedRace = viewModel.allRaces[row]
+        }
+        if pickerView == classPicker {
+            viewModel.selectedClass = viewModel.allClasses[row]
+        }
     }
 }

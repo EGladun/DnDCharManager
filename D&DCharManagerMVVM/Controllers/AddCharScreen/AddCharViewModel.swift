@@ -12,12 +12,23 @@ class AddCharViewModel: BaseViewModel {
     var allRaces = Race.allCases
     var allClasses = Class.allCases
     
+    var selectedRace: Race = .human
+    var selectedClass: Class = .knight
+    
+    var heroCreated: (()->Void)?
+    
     func raceCount() -> Int {
         return Race.allCases.count
     }
     
     func classCount() -> Int {
         return Class.allCases.count
+    }
+    
+    func createHero(with name: String) {
+        let hero = HeroCharacter(name: name, race: selectedRace, height: 180, weight: 90, gClass: selectedClass, stats: CharStats(strenght: Int.random(in: 1...15), agility: Int.random(in: 1...15), wisdom: Int.random(in: 1...15), luck: Int.random(in: 1...15)), icon: "")
+        LocalManager.shared.addNewCharacter(hero)
+        heroCreated?()
     }
     
 }
