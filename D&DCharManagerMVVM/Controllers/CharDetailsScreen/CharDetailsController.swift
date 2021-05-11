@@ -46,8 +46,31 @@ class CharDetailsController: BaseController {
         wisdomLabel.text = "Wisdom: \(hero.stats.wisdom)"
         luckLabel.text = "Luck: \(hero.stats.luck)"
     }
+    
+    func generateQRCode(from string: String) -> UIImage? {
+            let data = string.data(using: String.Encoding.utf8)
+
+            if let filter = CIFilter(name: "CIQRCodeGenerator") {
+                filter.setValue(data, forKey: "inputMessage")
+                let transform = CGAffineTransform(scaleX: 5, y: 5)
+
+                if let output = filter.outputImage?.transformed(by: transform) {
+                    return UIImage(ciImage: output)
+                }
+            }
+
+            return nil
+        }
+
 
     @IBAction func shareButton(_ sender: Any) {
+        guard let image = generateQRCode(from: "Govno iz zhopi") else {
+            return
+        }
         
+        let vc = QRCOdeController()
+        vc.loadImage(image)
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true, completion: nil)
     }
 }

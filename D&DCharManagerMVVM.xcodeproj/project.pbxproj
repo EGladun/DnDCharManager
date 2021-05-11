@@ -36,6 +36,8 @@
 		FA7898BA2646FF3A00C21392 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7898B92646FF3A00C21392 /* NSObjectExtensions.swift */; };
 		FAF5EC52264B076D0082B81F /* CharDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5EC51264B076D0082B81F /* CharDetailsController.swift */; };
 		FAF5EC5A264B07860082B81F /* CharDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5EC59264B07860082B81F /* CharDetailsViewModel.swift */; };
+		FAF5EC60264B17350082B81F /* QRCOdeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5EC5E264B17350082B81F /* QRCOdeController.swift */; };
+		FAF5EC61264B17350082B81F /* QRCOdeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF5EC5F264B17350082B81F /* QRCOdeController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		FA7898B92646FF3A00C21392 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 		FAF5EC51264B076D0082B81F /* CharDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailsController.swift; sourceTree = "<group>"; };
 		FAF5EC59264B07860082B81F /* CharDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailsViewModel.swift; sourceTree = "<group>"; };
+		FAF5EC5E264B17350082B81F /* QRCOdeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCOdeController.swift; sourceTree = "<group>"; };
+		FAF5EC5F264B17350082B81F /* QRCOdeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCOdeController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +310,8 @@
 			children = (
 				FAF5EC51264B076D0082B81F /* CharDetailsController.swift */,
 				FAF5EC59264B07860082B81F /* CharDetailsViewModel.swift */,
+				FAF5EC5E264B17350082B81F /* QRCOdeController.swift */,
+				FAF5EC5F264B17350082B81F /* QRCOdeController.xib */,
 			);
 			path = CharDetailsScreen;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0FBD922646B62B009F7AA4 /* LaunchScreen.storyboard in Resources */,
+				FAF5EC61264B17350082B81F /* QRCOdeController.xib in Resources */,
 				FA0FBD8F2646B62B009F7AA4 /* Assets.xcassets in Resources */,
 				FA0FBD8D2646B627009F7AA4 /* Main.storyboard in Resources */,
 				FA0FBE382646E07F009F7AA4 /* CharacterCell.xib in Resources */,
@@ -463,6 +470,7 @@
 				FAF5EC5A264B07860082B81F /* CharDetailsViewModel.swift in Sources */,
 				FA0FBE1B2646C0A5009F7AA4 /* VIewControllersFactory.swift in Sources */,
 				FA0FBE422646E11F009F7AA4 /* UIViewExtensions.swift in Sources */,
+				FAF5EC60264B17350082B81F /* QRCOdeController.swift in Sources */,
 				FA0FBDDE2646BAB4009F7AA4 /* RouterImp.swift in Sources */,
 				FA67101426471A0400A41BF3 /* LocalManager.swift in Sources */,
 				FA0FBD862646B626009F7AA4 /* AppDelegate.swift in Sources */,

@@ -56,6 +56,7 @@ extension CharListController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CharacterCell.self)) as! CharacterCell
         cell.fillData(with: viewModel.getCharList()[indexPath.row])
+        cell.selectionStyle = .none
         return cell
     }
     
