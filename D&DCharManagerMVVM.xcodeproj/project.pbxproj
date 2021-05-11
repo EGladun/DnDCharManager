@@ -34,6 +34,8 @@
 		FA7898A82646E81C00C21392 /* CharStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7898A72646E81C00C21392 /* CharStats.swift */; };
 		FA7898B52646FF2800C21392 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7898B42646FF2800C21392 /* UIViewControllerExtension.swift */; };
 		FA7898BA2646FF3A00C21392 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7898B92646FF3A00C21392 /* NSObjectExtensions.swift */; };
+		FAF5EC52264B076D0082B81F /* CharDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5EC51264B076D0082B81F /* CharDetailsController.swift */; };
+		FAF5EC5A264B07860082B81F /* CharDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5EC59264B07860082B81F /* CharDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		FA7898A72646E81C00C21392 /* CharStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharStats.swift; sourceTree = "<group>"; };
 		FA7898B42646FF2800C21392 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = ../../../../winmobile/WINmobile/Extensions/UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		FA7898B92646FF3A00C21392 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
+		FAF5EC51264B076D0082B81F /* CharDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailsController.swift; sourceTree = "<group>"; };
+		FAF5EC59264B07860082B81F /* CharDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 		FA0FBDBE2646B6E9009F7AA4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FAF5EC50264B07470082B81F /* CharDetailsScreen */,
 				FA671005264716AC00A41BF3 /* AddCharScreen */,
 				FA0FBDC32646B797009F7AA4 /* CharsListScreen */,
 			);
@@ -294,6 +299,15 @@
 				FA7898A72646E81C00C21392 /* CharStats.swift */,
 			);
 			path = Structs;
+			sourceTree = "<group>";
+		};
+		FAF5EC50264B07470082B81F /* CharDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FAF5EC51264B076D0082B81F /* CharDetailsController.swift */,
+				FAF5EC59264B07860082B81F /* CharDetailsViewModel.swift */,
+			);
+			path = CharDetailsScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,9 +456,11 @@
 				FA0FBE372646E07F009F7AA4 /* CharacterCell.swift in Sources */,
 				FA0FBE212646C1B4009F7AA4 /* BaseController.swift in Sources */,
 				FA67100F2647173D00A41BF3 /* AddCharViewModel.swift in Sources */,
+				FAF5EC52264B076D0082B81F /* CharDetailsController.swift in Sources */,
 				FA0FBE3D2646E0C1009F7AA4 /* UITableViewExtentions.swift in Sources */,
 				FA7898A82646E81C00C21392 /* CharStats.swift in Sources */,
 				FA0FBDD62646BA8E009F7AA4 /* Router.swift in Sources */,
+				FAF5EC5A264B07860082B81F /* CharDetailsViewModel.swift in Sources */,
 				FA0FBE1B2646C0A5009F7AA4 /* VIewControllersFactory.swift in Sources */,
 				FA0FBE422646E11F009F7AA4 /* UIViewExtensions.swift in Sources */,
 				FA0FBDDE2646BAB4009F7AA4 /* RouterImp.swift in Sources */,

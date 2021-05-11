@@ -18,4 +18,7 @@ class ViewControllersFactory {
         return AddCharController.controllerFromStoryboard("Main")
     }
     
+    func makeCharDetailsVC() -> CharDetailsController {
+        return CharDetailsController.controllerFromStoryboard("Main")
+    }
 }

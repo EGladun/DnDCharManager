@@ -17,6 +17,7 @@ class CharListController: BaseController {
     let viewModel = CharListViewModel()
     
     var onPlusCharacter: (()->Void)?
+    var onCharDetail: ((HeroCharacter)->Void)?
     
     //MARK: Lifecycle
     
@@ -56,5 +57,13 @@ extension CharListController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CharacterCell.self)) as! CharacterCell
         cell.fillData(with: viewModel.getCharList()[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row < viewModel.getCharList().count else {
+            return
+        }
+        let char = viewModel.getCharList()[indexPath.row]
+        onCharDetail?(char)
     }
 }
