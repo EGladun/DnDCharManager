@@ -49,7 +49,7 @@ class AddCharController: BaseController {
     //MARK: Actions
     
     @IBAction func generateHandler(_ sender: Any) {
-        if let name = nameField.text {
+        if let name = nameField.text, name != "" {
             viewModel.createHero(with: name)
         } else {
             let alertController = UIAlertController(title: "Oops", message: "I'm sorry", preferredStyle: .alert)

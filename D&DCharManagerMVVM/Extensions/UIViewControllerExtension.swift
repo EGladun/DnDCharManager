@@ -14,8 +14,8 @@ extension UIViewController {
         return controllerInStoryboard(storyboard, identifier: nameOfClass)
     }
     
-    class func controllerFromStoryboard(_ storyboard: StoryboardsEnum) -> Self {
-        return controllerInStoryboard(UIStoryboard(name: storyboard.rawValue, bundle: nil), identifier: nameOfClass)
+    class func controllerFromStoryboard(_ storyboard: String) -> Self {
+        return controllerInStoryboard(UIStoryboard(name: storyboard, bundle: nil), identifier: nameOfClass)
     }
 }
 
