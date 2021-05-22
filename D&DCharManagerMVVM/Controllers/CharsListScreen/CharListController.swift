@@ -30,8 +30,6 @@ class CharListController: BaseController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.fetchCharacters()
-//        viewModel.addMockHeroes()
-        charactersTable?.reloadData()
     }
     
     //MARK: Methods

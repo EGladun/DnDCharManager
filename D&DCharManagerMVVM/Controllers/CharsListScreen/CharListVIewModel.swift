@@ -19,6 +19,7 @@ class CharListViewModel: BaseViewModel {
     var controller: CharListController?
     
     func fetchCharacters() {
+        charList.removeAll()
         let db = Firestore.firestore()
         
         db.collection("Characters").getDocuments { (snapshot, error) in

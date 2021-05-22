@@ -64,7 +64,7 @@ class CharDetailsController: BaseController {
 
 
     @IBAction func shareButton(_ sender: Any) {
-        guard let image = generateQRCode(from: "Govno iz zhopi") else {
+        guard let image = generateQRCode(from: "ddcman://\(viewModel.character)") else {
             return
         }
         
