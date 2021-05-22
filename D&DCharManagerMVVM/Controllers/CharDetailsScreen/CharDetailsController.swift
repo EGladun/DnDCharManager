@@ -17,6 +17,8 @@ class CharDetailsController: BaseController {
     @IBOutlet weak var wisdomLabel: UILabel!
     @IBOutlet weak var luckLabel: UILabel!
     
+    //StatsBlock
+    
     let viewModel = CharDetailsViewModel()
     
     override func viewDidLoad() {
@@ -64,7 +66,7 @@ class CharDetailsController: BaseController {
 
 
     @IBAction func shareButton(_ sender: Any) {
-        guard let image = generateQRCode(from: "ddcman://\(viewModel.character)") else {
+        guard let image = generateQRCode(from: "ddcman://\(viewModel.character?.id ?? 0)") else {
             return
         }
         

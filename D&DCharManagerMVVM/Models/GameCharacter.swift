@@ -25,7 +25,6 @@ class HeroCharacter {
     
     func toDictionary() -> [String: Any] {
         var fields: [String: Any] = [:]
-        fields["id"] = id
         fields["name"] = name
         fields["race"] = race.string
         fields["class"] = gClass.string
