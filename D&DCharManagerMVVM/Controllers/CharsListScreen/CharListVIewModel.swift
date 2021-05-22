@@ -12,6 +12,7 @@ class CharListViewModel: BaseViewModel {
     
     private var charList = [HeroCharacter]() {
         didSet {
+            controller?.refreshControl?.endRefreshing()
             controller?.charactersTable.reloadData()
         }
     }
@@ -33,7 +34,8 @@ class CharListViewModel: BaseViewModel {
                 let newHero = HeroCharacter(name: data["name"] as? String ?? "Error name",
                                             race: Race(string: data["race"] as? String ?? "human"),
                                             gClass: Class(string: data["class"] as? String ?? ""),
-                                            stats: CharStats(strenght: data["strength"] as! Int, agility: data["agility"] as! Int, wisdom: data["wisdom"] as! Int, luck: data["luck"] as! Int))
+                                            stats: CharStats(strenght: data["strength"] as! Int, agility: data["agility"] as! Int, wisdom: data["wisdom"] as! Int, luck: data["luck"] as! Int),
+                                            id: data["id"] as? Int ?? 0)
                 self.charList.append(newHero)
             }
         }
@@ -41,11 +43,6 @@ class CharListViewModel: BaseViewModel {
     
     func getCharList() -> [HeroCharacter] {
         return charList
-    }
-    
-    func addMockHeroes() {
-        charList.append(HeroCharacter(name: "Konan", race: .human, gClass: .barbarian, stats: CharStats(strenght: 15, agility: 10, wisdom: 7, luck: 8)))
-        charList.append(HeroCharacter(name: "Agronom", race: .human, gClass: .pathfinder, stats: CharStats(strenght: 9, agility: 15, wisdom: 10, luck: 10)))
     }
     
 }

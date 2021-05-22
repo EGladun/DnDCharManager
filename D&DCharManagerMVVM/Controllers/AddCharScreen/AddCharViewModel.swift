@@ -81,7 +81,7 @@ class AddCharViewModel: BaseViewModel {
     }
     
     func createHero(with name: String) {
-        let hero = HeroCharacter(name: name, race: selectedRace, gClass: selectedClass, stats: CharStats(strenght: strength, agility: agility, wisdom: wisdom, luck: luck))
+        let hero = HeroCharacter(name: name, race: selectedRace, gClass: selectedClass, stats: CharStats(strenght: strength, agility: agility, wisdom: wisdom, luck: luck), id: "\(name).\(selectedRace.string).\(selectedClass.string)".hash)
         FirestoreManager.addHero(hero.toDictionary())
         controller?.onBack?()
     }

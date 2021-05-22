@@ -19,11 +19,14 @@ class CharListController: BaseController {
     var onPlusCharacter: (()->Void)?
     var onCharDetail: ((HeroCharacter)->Void)?
     
+    var refreshControl: UIRefreshControl?
+    
     //MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupRefreshControl()
         viewModel.controller = self
     }
     
@@ -38,6 +41,16 @@ class CharListController: BaseController {
         charactersTable?.delegate = self
         charactersTable?.dataSource = self
         charactersTable?.registerCellNib(CharacterCell.self)
+    }
+    
+    func setupRefreshControl(){
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        self.charactersTable?.refreshControl = refreshControl
+    }
+    
+    @objc func refresh() {
+        viewModel.fetchCharacters()
     }
     
     //MARK: Actions

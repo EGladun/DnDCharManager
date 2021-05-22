@@ -15,16 +15,17 @@ class HeroCharacter {
     var stats: CharStats
     var id: Int
     
-    internal init(name: String, race: Race, gClass: Class, stats: CharStats) {
+    internal init(name: String, race: Race, gClass: Class, stats: CharStats, id: Int) {
         self.name = name
         self.race = race
         self.gClass = gClass
         self.stats = stats
-        self.id = "\(name).\(race).\(gClass)".hash
+        self.id = id
     }
     
     func toDictionary() -> [String: Any] {
         var fields: [String: Any] = [:]
+        fields["id"] = id
         fields["name"] = name
         fields["race"] = race.string
         fields["class"] = gClass.string

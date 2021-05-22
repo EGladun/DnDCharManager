@@ -25,7 +25,8 @@ class FirestoreManager {
                 let newHero = HeroCharacter(name: data["name"] as? String ?? "Error name",
                                             race: Race(string: data["race"] as? String ?? "human"),
                                             gClass: Class(string: data["class"] as? String ?? ""),
-                                            stats: CharStats(strenght: data["strength"] as! Int, agility: data["agility"] as! Int, wisdom: data["wisdom"] as! Int, luck: data["luck"] as! Int))
+                                            stats: CharStats(strenght: data["strength"] as! Int, agility: data["agility"] as! Int, wisdom: data["wisdom"] as! Int, luck: data["luck"] as! Int),
+                                            id: data["id"] as? Int ?? 0)
                 heroes.append(newHero)
             }
         }

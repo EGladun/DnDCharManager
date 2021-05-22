@@ -121,6 +121,7 @@ class AddCharController: BaseController {
     }
 }
 
+//MARK: Extensions
 extension AddCharController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
