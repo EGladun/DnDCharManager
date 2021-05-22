@@ -24,12 +24,13 @@ class CharListController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        viewModel.controller = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.fetchCharacters()
-        viewModel.addMockHeroes()
+//        viewModel.addMockHeroes()
         charactersTable?.reloadData()
     }
     

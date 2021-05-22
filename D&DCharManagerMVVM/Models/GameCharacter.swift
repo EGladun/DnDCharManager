@@ -11,26 +11,43 @@ class HeroCharacter {
     
     var name: String
     var race: Race
-    var height: Float
-    var weight: Float
     var gClass: Class
     var stats: CharStats
-    var heroIcon: String
     
-    internal init(name: String, race: Race, height: Float, weight: Float, gClass: Class, stats: CharStats, icon: String) {
+    internal init(name: String, race: Race, gClass: Class, stats: CharStats) {
         self.name = name
         self.race = race
-        self.height = height
-        self.weight = weight
         self.gClass = gClass
         self.stats = stats
-        self.heroIcon = icon
+    }
+    
+    func toDictionary() -> [String: Any] {
+        var fields: [String: Any] = [:]
+        fields["name"] = name
+        fields["race"] = race.string
+        fields["class"] = gClass.string
+        fields["strength"] = stats.strenght
+        fields["agility"] = stats.agility
+        fields["wisdom"] = stats.wisdom
+        fields["luck"] = stats.luck
+        
+        return fields
     }
     
 }
 
 enum Race: CaseIterable {
     case human, elf, dwarf, succubus, demon, dragonite, tiffling
+    
+    init(string: String) {
+        var grace: Race = .human
+        Race.allCases.forEach { (race) in
+            if race.string == string {
+                grace = race
+            }
+        }
+        self = grace
+    }
     
     var string: String {
         switch self {
@@ -54,6 +71,16 @@ enum Race: CaseIterable {
 
 enum Class: CaseIterable {
     case knight, mage, rogue, thief, barbarian, warlock, shaman, druid, pathfinder
+    
+    init(string: String) {
+        var gclass: Class = .knight
+        Class.allCases.forEach { (cls) in
+            if cls.string == string {
+                gclass = cls
+            }
+        }
+        self = gclass
+    }
     
     var string: String {
         switch self {

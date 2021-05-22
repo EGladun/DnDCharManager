@@ -26,7 +26,7 @@ class AddCharViewModel: BaseViewModel {
     }
     
     func createHero(with name: String) {
-        let hero = HeroCharacter(name: name, race: selectedRace, height: 180, weight: 90, gClass: selectedClass, stats: CharStats(strenght: Int.random(in: 1...15), agility: Int.random(in: 1...15), wisdom: Int.random(in: 1...15), luck: Int.random(in: 1...15)), icon: "")
+        let hero = HeroCharacter(name: name, race: selectedRace, gClass: selectedClass, stats: CharStats(strenght: Int.random(in: 1...15), agility: Int.random(in: 1...15), wisdom: Int.random(in: 1...15), luck: Int.random(in: 1...15)))
         LocalManager.shared.addNewCharacter(hero)
         heroCreated?()
     }
