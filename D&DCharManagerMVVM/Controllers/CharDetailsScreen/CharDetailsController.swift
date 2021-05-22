@@ -23,19 +23,22 @@ class CharDetailsController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.controller = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        setupView()
     }
     
     func fillCharacter(_ char: HeroCharacter) {
         viewModel.character = char
     }
     
-    private func setupView() {
+    func fillCharacterId(_ id: Int) {
+        viewModel.getCurrentHero(with: id)
+    }
+    
+    func setupView() {
         guard let hero = viewModel.character else {
             return
         }
