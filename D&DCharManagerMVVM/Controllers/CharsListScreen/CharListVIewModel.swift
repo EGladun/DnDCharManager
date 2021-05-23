@@ -13,7 +13,7 @@ class CharListViewModel: BaseViewModel {
     private var charList = [HeroCharacter]() {
         didSet {
             controller?.refreshControl?.endRefreshing()
-            controller?.charactersTable.reloadData()
+            controller?.updateTableView()
         }
     }
     

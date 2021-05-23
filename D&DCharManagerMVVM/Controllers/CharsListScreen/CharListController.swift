@@ -11,6 +11,7 @@ class CharListController: BaseController {
     
     //MARK: Outlets
     @IBOutlet weak var charactersTable: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     
     //MARK: Variables and constants
     
@@ -41,6 +42,11 @@ class CharListController: BaseController {
         charactersTable?.delegate = self
         charactersTable?.dataSource = self
         charactersTable?.registerCellNib(CharacterCell.self)
+    }
+    
+    func updateTableView() {
+        emptyView.isHidden = !viewModel.getCharList().isEmpty
+        charactersTable.reloadData()
     }
     
     func setupRefreshControl(){

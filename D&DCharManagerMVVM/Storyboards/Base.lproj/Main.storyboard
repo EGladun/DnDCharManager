@@ -176,6 +176,34 @@
                                 <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7BE-X9-0wA">
+                                <rect key="frame" x="0.0" y="348" width="414" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heroes list is empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KZ-tC-iid">
+                                        <rect key="frame" x="16" y="87" width="382" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can create one with plus button on top of the screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aoi-Wn-LFg">
+                                        <rect key="frame" x="16" y="129.5" width="382" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="B5J-cu-XG3"/>
+                                    <constraint firstItem="Aoi-Wn-LFg" firstAttribute="leading" secondItem="7BE-X9-0wA" secondAttribute="leading" constant="16" id="E1L-Om-yyY"/>
+                                    <constraint firstAttribute="trailing" secondItem="5KZ-tC-iid" secondAttribute="trailing" constant="16" id="Fj1-hl-6sY"/>
+                                    <constraint firstItem="5KZ-tC-iid" firstAttribute="centerX" secondItem="7BE-X9-0wA" secondAttribute="centerX" id="Lbh-o2-Un3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aoi-Wn-LFg" secondAttribute="trailing" constant="16" id="RQz-PC-AcG"/>
+                                    <constraint firstItem="Aoi-Wn-LFg" firstAttribute="top" secondItem="5KZ-tC-iid" secondAttribute="bottom" constant="16" id="XrQ-1d-qIR"/>
+                                    <constraint firstItem="5KZ-tC-iid" firstAttribute="leading" secondItem="7BE-X9-0wA" secondAttribute="leading" constant="16" id="ncK-nd-dzh"/>
+                                    <constraint firstItem="5KZ-tC-iid" firstAttribute="centerY" secondItem="7BE-X9-0wA" secondAttribute="centerY" id="z4X-9M-Shb"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxc-q8-pIL">
                                 <rect key="frame" x="364" y="44" width="50" height="50"/>
                                 <constraints>
@@ -191,6 +219,9 @@
                         <viewLayoutGuide key="safeArea" id="udm-ff-4Xv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7BE-X9-0wA" firstAttribute="centerY" secondItem="iMP-Z5-7Id" secondAttribute="centerY" id="B0g-rP-gkt"/>
+                            <constraint firstItem="udm-ff-4Xv" firstAttribute="trailing" secondItem="7BE-X9-0wA" secondAttribute="trailing" id="D4k-Oh-IwH"/>
+                            <constraint firstItem="7BE-X9-0wA" firstAttribute="leading" secondItem="udm-ff-4Xv" secondAttribute="leading" id="HVl-jI-4Xa"/>
                             <constraint firstItem="Sxc-q8-pIL" firstAttribute="top" secondItem="udm-ff-4Xv" secondAttribute="top" id="Pt1-nv-Zcq"/>
                             <constraint firstItem="udm-ff-4Xv" firstAttribute="trailing" secondItem="Sxc-q8-pIL" secondAttribute="trailing" id="Wbb-Re-hha"/>
                             <constraint firstItem="Wmq-iP-vPj" firstAttribute="top" secondItem="udm-ff-4Xv" secondAttribute="top" constant="50" id="bsN-yT-SV3"/>
@@ -201,6 +232,7 @@
                     </view>
                     <connections>
                         <outlet property="charactersTable" destination="Wmq-iP-vPj" id="LJd-H5-lSn"/>
+                        <outlet property="emptyView" destination="7BE-X9-0wA" id="aBA-v3-1gq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Irj-tu-pkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
