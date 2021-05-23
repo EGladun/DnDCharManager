@@ -11,6 +11,11 @@ class BaseController: UIViewController {
     
     var onBack: (() -> Void)?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
+    }
+    
     func makeAlert(title: String, message: String, btnTitle: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: btnTitle, style: .default, handler: {_ in
