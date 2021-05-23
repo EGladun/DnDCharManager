@@ -25,6 +25,11 @@ class ApplicationCoordinator {
         startCharactersFlow()
     }
     
+    func start(id: Int) {
+        startCharactersFlow()
+        toCharactersDetail(nil, id: id)
+    }
+    
     private func startCharactersFlow() {
         charListView = factory.makeCharListVC()
         
@@ -33,7 +38,7 @@ class ApplicationCoordinator {
         }
         
         charListView?.onCharDetail = { [weak self] character in
-            self?.toCharactersDetail(character)
+            self?.toCharactersDetail(character, id: nil)
         }
         
         router.push(charListView)
@@ -49,14 +54,18 @@ class ApplicationCoordinator {
         router.push(addCharView)
     }
     
-    private func toCharactersDetail(_ char: HeroCharacter) {
+    private func toCharactersDetail(_ char: HeroCharacter?, id: Int?) {
         charDetailsView = factory.makeCharDetailsVC()
         
         charDetailsView?.onBack = { [weak self] in
             self?.router.popModule()
         }
         
-        charDetailsView?.fillCharacter(char)
+        if let char = char {
+            charDetailsView?.fillCharacter(char)
+        } else if let id = id {
+            charDetailsView?.fillCharacterId(id)
+        }
         
         router.push(charDetailsView)
     }

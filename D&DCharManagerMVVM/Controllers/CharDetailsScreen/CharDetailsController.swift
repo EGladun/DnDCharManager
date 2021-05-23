@@ -28,6 +28,7 @@ class CharDetailsController: BaseController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupView()
     }
     
     func fillCharacter(_ char: HeroCharacter) {
